@@ -319,20 +319,7 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Floating Trust Badge in Bottom-Right (Covers Watermark & Builds Credibility) */}
-      <div className="absolute right-3 sm:right-6 md:right-8 bottom-3 sm:bottom-4 md:bottom-6 z-20 flex items-center gap-2 sm:gap-2.5 rounded-xl border border-white/20 bg-[#071322]/90 px-3 sm:px-4 py-1.5 sm:py-2 shadow-2xl backdrop-blur-md">
-        <div className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full bg-sun/20 text-sun border border-sun/40 flex-shrink-0">
-          <ShieldCheck className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-        </div>
-        <div className="text-left leading-tight">
-          <p className="text-[9px] sm:text-[10px] font-bold tracking-wider text-sun uppercase">
-            ISO 9001:2015
-          </p>
-          <p className="text-[10px] sm:text-[11px] font-semibold text-white/95 whitespace-nowrap">
-            Certified Solar Partner
-          </p>
-        </div>
-      </div>
+
     </section>
   );
 }

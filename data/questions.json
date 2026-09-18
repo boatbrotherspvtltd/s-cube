@@ -1,0 +1,521 @@
+[
+    {
+        "id": 1,
+        "category": "Company",
+        "question": "What is S-Cube Mercantile?",
+        "answer": "S-Cube Mercantile is a Guwahati, Assam based CNF (Carrying & Forwarding Agent), distributor and dealer of solar energy products.",
+        "examples": [
+            "What is S-Cube Mercantile?",
+            "Tell me about your company",
+            "Who are you?",
+            "What does S-Cube Mercantile do?",
+            "What kind of company are you?"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Company",
+        "question": "Where is S-Cube Mercantile located?",
+        "answer": "S-Cube Mercantile is based in Guwahati, Assam.",
+        "examples": [
+            "Where are you located?",
+            "location?",
+            "Where are you based?",
+            "Where is your company?",
+            "Where is your office?"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Company",
+        "question": "How long has S-Cube Mercantile been in business?",
+        "answer": "S-Cube Mercantile has been serving customers across the region for 7+ years.",
+        "examples": [
+            "How many years have you been in business?",
+            "How old is the company?",
+            "How long have you been operating?",
+            "How much experience do you have?",
+            "Years of experience?"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Company",
+        "question": "What is the business model of S-Cube Mercantile?",
+        "answer": "S-Cube Mercantile operates as a CNF (Carrying & Forwarding Agent), distributor and dealer of solar products.",
+        "examples": [
+            "What is your business model?",
+            "Are you a dealer or distributor?",
+            "Are you a solar distributor?",
+            "What type of business are you?",
+            "What do you do as a company?"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Company",
+        "question": "Where does S-Cube Mercantile operate?",
+        "answer": "S-Cube Mercantile is based in Guwahati and focuses on distribution across Assam and the wider Northeast region.",
+        "examples": [
+            "Which areas do you serve?",
+            "Do you operate in Northeast India?",
+            "Do you supply across Assam?",
+            "Where do you distribute your products?",
+            "Which region do you cover?"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Products",
+        "question": "What products does S-Cube Mercantile provide?",
+        "answer": "S-Cube Mercantile provides solar PV modules, inverters, batteries, solar water pumps, solar street lighting systems, home lighting systems, mounting structures, cables, connectors, charge controllers, junction boxes and other balance-of-system components.",
+        "examples": [
+            "What products do you sell?",
+            "What solar products do you have?",
+            "What do you provide?",
+            "What products are available?",
+            "What solar equipment do you deal in?"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "Solar Panels",
+        "question": "What types of solar panels do you provide?",
+        "answer": "S-Cube Mercantile provides high-efficiency polycrystalline, monocrystalline and Mono PERC/TOPCon solar panels.",
+        "examples": [
+            "What types of solar panels do you have?",
+            "Do you sell monocrystalline panels?",
+            "Do you have polycrystalline panels?",
+            "Do you provide TOPCon panels?",
+            "What panel technologies are available?"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "Brands",
+        "question": "Which solar panel brands do you deal with?",
+        "answer": "S-Cube Mercantile represents Adani Solar and Waaree Solar for solar PV modules.",
+        "examples": [
+            "Which solar panel brands do you sell?",
+            "What panel brands do you have?",
+            "Do you deal in Adani Solar?",
+            "Do you deal in Waaree Solar?",
+            "Which brands of solar panels are available?"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "Inverters",
+        "question": "What types of solar inverters do you provide?",
+        "answer": "S-Cube Mercantile provides on-grid, off-grid and hybrid inverter solutions.",
+        "examples": [
+            "What types of inverters do you have?",
+            "Do you have on-grid inverters?",
+            "Do you sell off-grid inverters?",
+            "Do you have hybrid inverters?",
+            "What inverter options are available?"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "Brands",
+        "question": "Which inverter brands do you deal with?",
+        "answer": "S-Cube Mercantile provides inverter solutions from Luminous and Microtek.",
+        "examples": [
+            "Which inverter brands do you sell?",
+            "What inverter brands do you have?",
+            "Do you deal in Luminous inverters?",
+            "Do you deal in Microtek inverters?",
+            "Which brands of inverters are available?"
+        ]
+    },
+    {
+        "id": 11,
+        "category": "Batteries",
+        "question": "What type of solar batteries do you provide?",
+        "answer": "S-Cube Mercantile provides tubular and solar-specific batteries for dependable energy storage.",
+        "examples": [
+            "Do you sell solar batteries?",
+            "What batteries do you have?",
+            "Do you have tubular batteries?",
+            "What type of batteries are available?",
+            "Do you provide battery storage solutions?"
+        ]
+    },
+    {
+        "id": 12,
+        "category": "Brands",
+        "question": "Which battery brands do you deal with?",
+        "answer": "S-Cube Mercantile provides batteries from Luminous and Microtek.",
+        "examples": [
+            "Which battery brands do you sell?",
+            "What battery brands do you have?",
+            "Do you sell Luminous batteries?",
+            "Do you sell Microtek batteries?",
+            "Which brands of batteries are available?"
+        ]
+    },
+    {
+        "id": 13,
+        "category": "Solar Pumps",
+        "question": "Do you provide solar water pumps?",
+        "answer": "Yes. S-Cube Mercantile provides submersible and surface solar pump systems.",
+        "examples": [
+            "Do you sell solar pumps?",
+            "Do you have solar water pumps?",
+            "Can I get a solar pump from you?",
+            "What solar pump systems do you provide?",
+            "Do you deal in solar pumping systems?"
+        ]
+    },
+    {
+        "id": 14,
+        "category": "Solar Pumps",
+        "question": "What can your solar water pumps be used for?",
+        "answer": "The solar water pumping solutions can be configured for agricultural irrigation, borewell water supply and community drinking-water requirements.",
+        "examples": [
+            "What are solar pumps used for?",
+            "Can your pumps be used for irrigation?",
+            "Do you provide pumps for borewells?",
+            "Can solar pumps be used for community water?",
+            "What applications do your solar pumps support?"
+        ]
+    },
+    {
+        "id": 15,
+        "category": "Lighting",
+        "question": "Do you provide solar street lights?",
+        "answer": "Yes. S-Cube Mercantile provides standalone solar street-lighting systems including panels, batteries, LED fixtures and controllers.",
+        "examples": [
+            "Do you sell solar street lights?",
+            "Do you have solar lighting?",
+            "What solar street lights do you provide?",
+            "Do you provide standalone street lighting?",
+            "Can I get solar street lights from you?"
+        ]
+    },
+    {
+        "id": 16,
+        "category": "Lighting",
+        "question": "Do you provide home lighting systems?",
+        "answer": "Yes. S-Cube Mercantile provides solar and backup lighting solutions for locations with limited or unreliable grid access.",
+        "examples": [
+            "Do you sell home lighting systems?",
+            "Do you provide solar home lights?",
+            "What home lighting solutions do you have?",
+            "Do you have backup lighting?",
+            "Can you provide lighting for areas with power problems?"
+        ]
+    },
+    {
+        "id": 17,
+        "category": "Accessories",
+        "question": "Do you provide solar mounting structures?",
+        "answer": "Yes. S-Cube Mercantile provides mounting structures for rooftop and other solar installation environments.",
+        "examples": [
+            "Do you sell mounting structures?",
+            "Do you provide solar mounting systems?",
+            "What mounting structures do you have?",
+            "Do you have rooftop mounting structures?",
+            "Can I get solar mounting equipment?"
+        ]
+    },
+    {
+        "id": 18,
+        "category": "Accessories",
+        "question": "Do you provide solar cables and connectors?",
+        "answer": "Yes. S-Cube Mercantile provides cables, MC4 connectors, junction boxes and allied electrical accessories.",
+        "examples": [
+            "Do you sell solar cables?",
+            "Do you have MC4 connectors?",
+            "Do you provide junction boxes?",
+            "What solar accessories do you sell?",
+            "Do you have cables and connectors?"
+        ]
+    },
+    {
+        "id": 19,
+        "category": "Accessories",
+        "question": "Do you provide charge controllers?",
+        "answer": "Yes. S-Cube Mercantile provides solar charge-control equipment for battery-based solar systems.",
+        "examples": [
+            "Do you sell charge controllers?",
+            "Do you have solar charge controllers?",
+            "Can I get a charge controller?",
+            "What charge-control equipment do you provide?",
+            "Do you provide controllers for solar batteries?"
+        ]
+    },
+    {
+        "id": 20,
+        "category": "Distribution",
+        "question": "Who does S-Cube Mercantile supply products to?",
+        "answer": "S-Cube Mercantile supports dealers, installers, retailers, institutional customers and end users through its distribution model.",
+        "examples": [
+            "Who can buy from you?",
+            "Who do you supply to?",
+            "Do you supply dealers?",
+            "Do you supply installers?",
+            "Do you supply businesses and end customers?"
+        ]
+    },
+    {
+        "id": 21,
+        "category": "Distribution",
+        "question": "Do you support dealers and installers?",
+        "answer": "Yes. S-Cube Mercantile provides commercial, supply and channel coordination support for dealers and installers.",
+        "examples": [
+            "Do you work with dealers?",
+            "Do you support solar installers?",
+            "Can installers buy from you?",
+            "Do you provide dealer support?",
+            "Do you work with solar EPC companies?"
+        ]
+    },
+    {
+        "id": 22,
+        "category": "Distribution",
+        "question": "Do you provide warranty support?",
+        "answer": "Yes. S-Cube Mercantile provides warranty coordination and assistance with warranty claims.",
+        "examples": [
+            "Do you provide warranty support?",
+            "What about warranty claims?",
+            "Can you help with warranty?",
+            "Do you coordinate warranty claims?",
+            "Is after-sales warranty support available?"
+        ]
+    },
+    {
+        "id": 23,
+        "category": "Support",
+        "question": "Do you provide technical support?",
+        "answer": "Yes. S-Cube Mercantile provides assistance with technical queries and product servicing support.",
+        "examples": [
+            "Do you provide technical support?",
+            "Can you help with technical questions?",
+            "Do you provide product support?",
+            "What happens if I have a technical issue?",
+            "Do you offer servicing support?"
+        ]
+    },
+    {
+        "id": 24,
+        "category": "Quality",
+        "question": "Is S-Cube Mercantile ISO certified?",
+        "answer": "Yes. S-Cube Mercantile is presented in its company profile as an ISO 9001:2015 certified firm.",
+        "examples": [
+            "Are you ISO certified?",
+            "What certification do you have?",
+            "Is your company ISO certified?",
+            "Do you have ISO 9001 certification?",
+            "What quality certification do you have?"
+        ]
+    },
+    {
+        "id": 25,
+        "category": "Brands",
+        "question": "Which major brands does S-Cube Mercantile represent?",
+        "answer": "S-Cube Mercantile represents Adani Solar and Waaree Solar for solar PV modules, and Luminous and Microtek for inverters, batteries and power solutions.",
+        "examples": [
+            "What brands do you deal with?",
+            "Which brands are available?",
+            "What are your main brands?",
+            "Which solar companies do you represent?",
+            "Tell me about your brand portfolio."
+        ]
+    },
+    {
+        "id": 26,
+        "category": "Applications",
+        "question": "What applications do your solar products support?",
+        "answer": "The product portfolio supports residential and commercial rooftops, large solar installations, agricultural irrigation and borewell applications, and community water and lighting schemes.",
+        "examples": [
+            "What can your solar products be used for?",
+            "What applications do you support?",
+            "Do you provide solutions for homes?",
+            "Do you support agricultural solar applications?",
+            "Can your products be used for commercial projects?"
+        ]
+    },
+    {
+        "id": 27,
+        "category": "Warehouse",
+        "question": "Do you have a solar products warehouse?",
+        "answer": "Yes. S-Cube Mercantile operates a warehouse-based distribution model in Guwahati supporting storage, handling and distribution of solar and electrical products.",
+        "examples": [
+            "Do you have a warehouse?",
+            "Where do you store your products?",
+            "Do you have stock in Guwahati?",
+            "Do you operate a solar warehouse?",
+            "Do you maintain product stock?"
+        ]
+    },
+    {
+        "id": 28,
+        "category": "Distribution",
+        "question": "Do you provide regional distribution support?",
+        "answer": "Yes. S-Cube Mercantile provides distribution support for Guwahati, Assam and the wider Northeast market.",
+        "examples": [
+            "Do you provide distribution services?",
+            "Do you distribute across Assam?",
+            "Can you supply products in Northeast India?",
+            "Do you provide regional supply support?",
+            "Can you handle distribution?"
+        ]
+    },
+    {
+        "id": 29,
+        "category": "Company",
+        "question": "What is S-Cube Mercantile's vision?",
+        "answer": "S-Cube Mercantile's vision is to become the Northeast's most trusted name in solar distribution and help drive the region's transition to clean, affordable and reliable energy.",
+        "examples": [
+            "What is your vision?",
+            "What is the company's vision?",
+            "What are you trying to achieve?",
+            "What is S-Cube's vision?",
+            "What is your long-term vision?"
+        ]
+    },
+    {
+        "id": 30,
+        "category": "Company",
+        "question": "What is S-Cube Mercantile's mission?",
+        "answer": "S-Cube Mercantile's mission is to deliver genuine, high-performance solar products and dependable service to dealers, installers and customers at fair and competitive prices.",
+        "examples": [
+            "What is your mission?",
+            "What is the company's mission?",
+            "What does S-Cube aim to provide?",
+            "What is S-Cube's mission?",
+            "What does the company stand for?"
+        ]
+    },
+    {
+        "id": 31,
+        "category": "Company",
+        "question": "What are S-Cube Mercantile's main strengths?",
+        "answer": "The company profile highlights 7+ years of experience, authorised distribution, a strong local network, CNF and distribution capabilities, competitive distributor-level pricing support and after-sales support.",
+        "examples": [
+            "Why choose S-Cube Mercantile?",
+            "What are your strengths?",
+            "What makes your company different?",
+            "Why should I choose S-Cube?",
+            "What advantages do you offer?"
+        ]
+    },
+    {
+        "id": 32,
+        "category": "Contact",
+        "question": "How can I contact S-Cube Mercantile?",
+        "answer": "You can contact S-Cube Mercantile at Info.scubemercantile@gmail.com. The registered/contact address is C/o Suchii Group, 1st Floor, Nikita Pinacle, Opp. of Vivanta by Taj, Khanpara, Guwahati, Assam, India – 781022.",
+        "examples": [
+            "How can I contact you?",
+            "How do I get in touch?",
+            "What is your email?",
+            "Where can I contact S-Cube?",
+            "What is your contact address?"
+        ]
+    },
+    {
+        "id": 33,
+        "category": "Contact",
+        "question": "What is the registered address of S-Cube Mercantile?",
+        "answer": "The registered/contact address is C/o Suchii Group, 1st Floor, Nikita Pinacle, Opp. of Vivanta by Taj, Khanpara, Guwahati, Assam, India – 781022.",
+        "examples": [
+            "What is your registered address?",
+            "Give me your full address",
+            "What is the office address?",
+            "Where is your registered office?",
+            "What is the complete address?"
+        ]
+    },
+    {
+        "id": 34,
+        "category": "Contact",
+        "question": "What is the email address of S-Cube Mercantile?",
+        "answer": "The email address provided in the company profile is Info.scubemercantile@gmail.com.",
+        "examples": [
+            "What is your email?",
+            "Give me your email address",
+            "How can I email you?",
+            "What email should I use?",
+            "S-Cube email?"
+        ]
+    },
+    {
+        "id": 35,
+        "category": "Company",
+        "question": "What is the website of S-Cube Mercantile?",
+        "answer": "The company website is www.scubemercantile.in.",
+        "examples": [
+            "What is your website?",
+            "Give me your website",
+            "Where can I find your website?",
+            "What is the S-Cube website?",
+            "Website?"
+        ]
+    },
+    {
+        "id": 36,
+        "category": "Company",
+        "question": "What is the GSTN of S-Cube Mercantile?",
+        "answer": "The GSTN listed in the company profile is 18EBPPS8578K4Z8.",
+        "examples": [
+            "What is your GST number?",
+            "Give me your GSTN",
+            "What is the GST number of S-Cube?",
+            "GST number?",
+            "Do you have a GST number?"
+        ]
+    },
+    {
+        "id": 37,
+        "category": "Purchase",
+        "question": "How can I purchase solar products?",
+        "answer": "For product availability, pricing, and purchase enquiries, please contact S-Cube Mercantile directly. Our team can assist you with your requirements.",
+        "examples": [
+            "I want to buy solar panels",
+            "I want to purchase an inverter",
+            "How can I buy your products?",
+            "I want to order something",
+            "I need to purchase solar products",
+            "I want to buy something from you",
+            "How do I place an order?"
+        ]
+    },
+    {
+        "id": 38,
+        "category": "General",
+        "question": "Hello / Greeting",
+        "answer": "Hello! 👋 Welcome to S-Cube Mercantile. How can I help you today? You can ask me about our solar products, authorized brands, installation support, office location in Guwahati, or purchase inquiries.",
+        "examples": [
+            "hi",
+            "hello",
+            "hey",
+            "hi there",
+            "hello there",
+            "hey team",
+            "good morning",
+            "good afternoon",
+            "good evening",
+            "namaste",
+            "greetings"
+        ]
+    },
+    {
+        "id": 39,
+        "category": "General",
+        "question": "Thank you / Courtesy / Bye",
+        "answer": "You're very welcome! 😊 If you need any further assistance with solar products or wish to get in touch with our team, feel free to ask or contact us at Info.scubemercantile@gmail.com.",
+        "examples": [
+            "thank you",
+            "thanks",
+            "thank you so much",
+            "thanks a lot",
+            "ok thank you",
+            "bye",
+            "goodbye",
+            "ok bye",
+            "alright thanks"
+        ]
+    }
+]

@@ -5,7 +5,7 @@ import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta(
   "Contact",
-  "WhatsApp S-Cube Mercantile in Guwahati for solar product supply, channel distribution and after-sales support across Assam and the Northeast.",
+  "Contact S-Cube Mercantile in Guwahati for solar product supply, dealership inquiries, channel distribution and after-sales support across Assam and the Northeast.",
   "/contact",
 );
 
@@ -13,9 +13,9 @@ export default function ContactPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Contact"
-        title="Continue on WhatsApp"
-        subtitle="Enquiries go to WhatsApp. Address and map stay here for dealers and installers visiting Guwahati."
+        eyebrow="Contact Us"
+        title="Get in Touch with S-Cube"
+        subtitle="Enquire about solar panels, inverters, dealership terms, or request product pricing. Reach out via our contact form or chat on WhatsApp."
       />
       <ContactSection />
     </main>

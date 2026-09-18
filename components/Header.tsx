@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { company, nav } from "@/lib/content";
-import { whatsappUrl } from "@/lib/whatsapp";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -47,14 +46,16 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-sun px-4 py-2 text-navy transition hover:bg-[#efb02a]"
+          <Link
+            href="/contact"
+            className={`rounded-full px-5 py-2 font-medium transition ${
+              pathname === "/contact"
+                ? "bg-white text-navy font-semibold shadow"
+                : "bg-sun text-navy hover:bg-[#efb02a]"
+            }`}
           >
-            WhatsApp
-          </a>
+            Contact
+          </Link>
         </nav>
 
         <button
@@ -83,15 +84,15 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={whatsappUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             onClick={() => setOpen(false)}
-            className="font-medium text-sun"
+            className={`font-semibold ${
+              pathname === "/contact" ? "text-sun underline" : "text-sun"
+            }`}
           >
-            WhatsApp
-          </a>
+            Contact
+          </Link>
         </nav>
       )}
     </header>
