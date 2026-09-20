@@ -7,14 +7,19 @@ export default function ProductForm({
   product,
   categories,
   media,
+  defaultCategoryId,
+  returnUrl,
 }: {
   product?: Product;
   categories: Category[];
   media: MediaItem[];
+  defaultCategoryId?: string;
+  returnUrl?: string;
 }) {
   return (
     <form action={saveProductAction} className="mt-8 max-w-3xl space-y-5">
       <input type="hidden" name="id" value={product?.id || ""} />
+      {returnUrl && <input type="hidden" name="returnUrl" value={returnUrl} />}
       <Field label="Name" name="name" defaultValue={product?.name} required />
       <Field label="Short name" name="short" defaultValue={product?.short} />
       <Field label="Slug" name="slug" defaultValue={product?.slug} />
@@ -31,7 +36,7 @@ export default function ProductForm({
         Category
         <select
           name="categoryId"
-          defaultValue={product?.categoryId}
+          defaultValue={product?.categoryId || defaultCategoryId || ""}
           className="mt-2 w-full rounded-xl border border-line px-3 py-3"
         >
           <option value="">Select category</option>

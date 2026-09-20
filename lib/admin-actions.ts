@@ -53,13 +53,20 @@ export async function saveProductAction(formData: FormData) {
   const slug = slugify(String(formData.get("slug") || name));
   const categoryId = String(formData.get("categoryId") || "");
   const icon = String(formData.get("icon") || "sun");
+  const returnUrl = String(formData.get("returnUrl") || "");
   const partners = String(formData.get("partners") || "")
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
   const imageIds = formData.getAll("imageIds").map(String);
 
-  if (!name || !slug) redirect("/admin/products?error=missing");
+  if (!name || !slug) {
+    if (returnUrl) {
+      const sep = returnUrl.includes("?") ? "&" : "?";
+      redirect(`${returnUrl}${sep}error=missing`);
+    }
+    redirect(categoryId ? `/admin/categories/${categoryId}?error=missing` : "/admin/products?error=missing");
+  }
 
   await updateCms((data) => {
     const next = {
@@ -79,17 +86,35 @@ export async function saveProductAction(formData: FormData) {
   });
 
   refresh();
-  redirect("/admin/products?saved=1");
+  if (returnUrl) {
+    const sep = returnUrl.includes("?") ? "&" : "?";
+    redirect(`${returnUrl}${sep}saved=1`);
+  } else if (categoryId) {
+    redirect(`/admin/categories/${categoryId}?saved=1`);
+  } else {
+    redirect("/admin/products?saved=1");
+  }
 }
 
 export async function deleteProductAction(formData: FormData) {
   await requireAdmin();
   const id = String(formData.get("id") || "");
+  const returnUrl = String(formData.get("returnUrl") || "");
+  const categoryId = String(formData.get("categoryId") || "");
+
   await updateCms((data) => {
     data.products = data.products.filter((item) => item.id !== id);
   });
   refresh();
-  redirect("/admin/products?deleted=1");
+
+  if (returnUrl) {
+    const sep = returnUrl.includes("?") ? "&" : "?";
+    redirect(`${returnUrl}${sep}deleted=1`);
+  } else if (categoryId) {
+    redirect(`/admin/categories/${categoryId}?deleted=1`);
+  } else {
+    redirect("/admin/products?deleted=1");
+  }
 }
 
 export async function saveCategoryAction(formData: FormData) {
@@ -98,7 +123,11 @@ export async function saveCategoryAction(formData: FormData) {
   const name = String(formData.get("name") || "").trim();
   const slug = slugify(String(formData.get("slug") || name));
   const description = String(formData.get("description") || "").trim();
-  if (!name) redirect("/admin/categories?error=missing");
+  const returnUrl = String(formData.get("returnUrl") || "");
+
+  if (!name) {
+    redirect(returnUrl ? `${returnUrl}?error=missing` : "/admin/categories?error=missing");
+  }
 
   await updateCms((data) => {
     const next = { id, name, slug, description };
@@ -107,12 +136,25 @@ export async function saveCategoryAction(formData: FormData) {
     else data.categories.push(next);
   });
   refresh();
-  redirect("/admin/categories?saved=1");
+
+  if (returnUrl) {
+    const sep = returnUrl.includes("?") ? "&" : "?";
+    redirect(`${returnUrl}${sep}saved=1`);
+  } else {
+    redirect("/admin/categories?saved=1");
+  }
 }
 
 export async function deleteCategoryAction(formData: FormData) {
   await requireAdmin();
   const id = String(formData.get("id") || "");
+
+  const cms = await readCms();
+  const hasProducts = cms.products.some((p) => p.categoryId === id);
+  if (hasProducts) {
+    redirect("/admin/categories?error=has_products");
+  }
+
   await updateCms((data) => {
     data.categories = data.categories.filter((item) => item.id !== id);
   });

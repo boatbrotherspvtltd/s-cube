@@ -18,12 +18,13 @@ interface BannerSlide {
   primaryLink: string;
   secondaryText: string;
   secondaryLink: string;
+  align?: "left" | "right";
 }
 
 const HERO_SLIDES: BannerSlide[] = [
   {
     id: 1,
-    src: "/images/hero/hero1.png",
+    src: "/images/hero/hero1.webp",
     alt: "S-Cube Mercantile Solar Distribution Guwahati Northeast",
     kicker: "Guwahati & Northeast's Best Solar Partner",
     title: "Power Backup",
@@ -34,10 +35,11 @@ const HERO_SLIDES: BannerSlide[] = [
     primaryLink: whatsappUrl("Hello S-Cube Mercantile, I want to enquire about solar inverters and home backup in Guwahati."),
     secondaryText: "View Products",
     secondaryLink: "/products",
+    align: "right",
   },
   {
     id: 2,
-    src: "/images/hero/hero2.png",
+    src: "/images/hero/hero2.webp",
     alt: "Agricultural Solar Water Pumping Systems Northeast",
     kicker: "Powering Northeast Agriculture & Irrigation",
     title: "Solar Water Pumps",
@@ -48,10 +50,11 @@ const HERO_SLIDES: BannerSlide[] = [
     primaryLink: whatsappUrl("Hello S-Cube Mercantile, I want to enquire about solar water pumping systems for the Northeast."),
     secondaryText: "Our Solutions",
     secondaryLink: "/solutions",
+    align: "left",
   },
   {
     id: 3,
-    src: "/images/hero/hero3.png",
+    src: "/images/hero/hero3.webp",
     alt: "Best Rooftop Solar Systems in Guwahati Assam",
     kicker: "Guwahati's Most Trusted Rooftop Solar Supply",
     title: "Clean Solar Power",
@@ -62,10 +65,11 @@ const HERO_SLIDES: BannerSlide[] = [
     primaryLink: whatsappUrl("Hello S-Cube Mercantile, I want to enquire about rooftop solar panels for my property."),
     secondaryText: "View Products",
     secondaryLink: "/products",
+    align: "left",
   },
   {
     id: 4,
-    src: "/images/hero/hero4.png",
+    src: "/images/hero/hero4.webp",
     alt: "Largest Wholesale Solar Distributor in Northeast India",
     kicker: "ISO 9001:2015 Certified · 7+ Years Of Excellence",
     title: "Commercial Solar",
@@ -76,6 +80,7 @@ const HERO_SLIDES: BannerSlide[] = [
     primaryLink: whatsappUrl("Hello S-Cube Mercantile, I am a dealer/installer looking for wholesale solar supply in the Northeast."),
     secondaryText: "Our Brands",
     secondaryLink: "/brands",
+    align: "left",
   },
 ];
 
@@ -129,7 +134,7 @@ export default function Hero() {
     }
   };
 
-  // Autoplay continuously in the forward direction
+  // Autoplay functionality
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
@@ -138,7 +143,7 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [nextSlide]);
 
-  // Touch swipe handling for mobile
+  // Touch Swipe handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.targetTouches[0].clientX);
   };
@@ -181,7 +186,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-navy select-none max-h-[90vh] md:max-h-[100vh] min-h-[420px] sm:min-h-[480px] md:min-h-[540px]"
+      className="relative w-full overflow-hidden bg-navy select-none max-h-[85vh] md:max-h-[95vh] min-h-[360px] sm:min-h-[440px] md:min-h-[520px]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -199,79 +204,103 @@ export default function Hero() {
           }`}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {EXTENDED_SLIDES.map((slide, idx) => (
-          <div
-            key={slide.uniqueKey}
-            className="relative w-full flex-shrink-0 aspect-[2752/1536] max-h-[90vh] md:max-h-[100vh] min-h-[420px] sm:min-h-[480px] md:min-h-[540px]"
-          >
-            {/* Background Image */}
-            <Image
-              src={slide.src}
-              alt={slide.alt}
-              fill
-              priority={idx === 1}
-              loading={idx === 1 ? "eager" : "lazy"}
-              sizes="100vw"
-              className="object-cover object-center"
-            />
+        {EXTENDED_SLIDES.map((slide, idx) => {
+          const isRightAligned = slide.align === "right";
 
-            {/* Microtek-Style Deep Dark Gradient Shading (Ensures 100% High-Contrast Legibility) */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#071322]/95 via-[#071322]/75 via-45% to-transparent z-10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071322]/70 via-transparent to-transparent z-10 sm:hidden" />
-            <div className="absolute right-0 bottom-0 w-64 sm:w-80 h-28 sm:h-36 bg-gradient-to-tl from-[#071322]/90 via-[#071322]/40 to-transparent z-10 pointer-events-none" />
+          return (
+            <div
+              key={slide.uniqueKey}
+              className="relative w-full flex-shrink-0 aspect-[2752/1536] max-h-[85vh] md:max-h-[95vh] min-h-[360px] sm:min-h-[440px] md:min-h-[520px]"
+            >
+              {/* Background Image */}
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={idx === 1}
+                loading={idx === 1 ? "eager" : "lazy"}
+                sizes="100vw"
+                className={`object-cover ${slide.id === 1 ? "object-[28%_center] md:object-center" : "object-center"}`}
+              />
 
-            {/* Slide Text Content Arranged in Microtek Commercial Banner Style */}
-            <div className="absolute inset-0 z-10 flex items-center">
-              <div className="mx-auto w-full max-w-7xl px-6 sm:px-12 md:px-16 lg:px-20 py-8 md:py-14">
-                <div className="max-w-xl md:max-w-2xl text-white">
-                  {/* Top Kicker / Accent Tag */}
-                  <div className="flex items-center gap-2.5 mb-2 sm:mb-3">
-                    <span className="inline-block w-5 sm:w-7 h-[2px] bg-sun" />
-                    <p className="text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.22em] text-sun uppercase drop-shadow">
-                      {slide.kicker}
+              {/* Shading Overlays: Custom per slide so faces aren't darkened */}
+              {isRightAligned ? (
+                // Right-aligned slide (Hero 1 with Family):
+                // Shadow sits on the RIGHT side, leaving left side (family) completely natural & bright
+                <>
+                  {/* Desktop / Tablet horizontal gradient: dark on the right, transparent on the left */}
+                  <div className="absolute inset-0 hidden md:block bg-gradient-to-l from-[#071322]/95 via-[#071322]/80 via-45% to-transparent z-10" />
+                  {/* Mobile gradient: subtle bottom gradient for text contrast without hiding faces above */}
+                  <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#071322]/95 via-[#071322]/55 via-45% to-transparent z-10" />
+                </>
+              ) : (
+                // Standard Left-aligned slides (Heroes 2, 3, 4):
+                <>
+                  {/* Desktop / Tablet horizontal gradient: dark on left, clear on right */}
+                  <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#071322]/95 via-[#071322]/80 via-45% to-transparent z-10" />
+                  {/* Mobile gradient */}
+                  <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#071322]/95 via-[#071322]/55 via-45% to-transparent z-10" />
+                  <div className="absolute right-0 bottom-0 w-48 sm:w-72 h-20 sm:h-32 bg-gradient-to-tl from-[#071322]/90 via-[#071322]/35 to-transparent z-10 pointer-events-none" />
+                </>
+              )}
+
+              {/* Slide Text Content */}
+              <div className="absolute inset-0 z-10 flex items-center">
+                <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-8 md:py-12 flex">
+                  <div
+                    className={`w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-white ${
+                      isRightAligned ? "ml-auto text-left" : "mr-auto text-left"
+                    }`}
+                  >
+                    {/* Top Kicker / Accent Tag */}
+                    <div className="flex items-center gap-1.5 sm:gap-2.5 mb-1 sm:mb-2 md:mb-3">
+                      <span className="inline-block w-4 sm:w-6 md:w-7 h-[2px] bg-sun" />
+                      <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.16em] sm:tracking-[0.22em] text-sun uppercase drop-shadow">
+                        {slide.kicker}
+                      </p>
+                    </div>
+
+                    {/* Main Headline - Scaled nicely so it does not overwhelm mobile screens */}
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase italic tracking-tight text-white leading-[1.1] sm:leading-[1.05] drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
+                      {slide.title}
+                    </h2>
+
+                    {/* Subtle Sleek Glowing Divider */}
+                    <div className="h-[2px] w-20 sm:w-28 md:w-36 lg:w-44 bg-gradient-to-r from-sun via-white/80 to-transparent my-1.5 sm:my-2.5 md:my-3.5 shadow-sm" />
+
+                    {/* Subtitle */}
+                    <p className="text-[11px] sm:text-xs md:text-sm lg:text-base font-semibold tracking-wider text-white/95 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] line-clamp-1 sm:line-clamp-none">
+                      {slide.subtitle}
                     </p>
-                  </div>
 
-                  {/* Main Headline - Bold Microtek-Style Impact */}
-                  <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase italic tracking-tight text-white leading-[1.05] drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
-                    {slide.title}
-                  </h2>
+                    {/* Description - Clamped to 2 lines on mobile so image stays visible */}
+                    <p className="mt-1.5 sm:mt-2.5 md:mt-3 text-[11px] sm:text-xs md:text-sm lg:text-base text-white/85 leading-snug sm:leading-relaxed max-w-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] line-clamp-2 sm:line-clamp-none">
+                      {slide.description}
+                    </p>
 
-                  {/* Subtle Sleek Glowing Divider */}
-                  <div className="h-[2px] w-32 sm:w-48 bg-gradient-to-r from-sun via-white/80 to-transparent my-2.5 sm:my-3.5 shadow-sm" />
-
-                  {/* Subtitle - Clean Engineering Tracking */}
-                  <p className="text-xs sm:text-sm md:text-base font-semibold tracking-wider text-white/95 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                    {slide.subtitle}
-                  </p>
-
-                  {/* Description */}
-                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-white/80 leading-relaxed max-w-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)]">
-                    {slide.description}
-                  </p>
-
-                  {/* Action Buttons */}
-                  <div className="mt-4 sm:mt-6 flex flex-wrap items-center gap-3 sm:gap-4">
-                    <a
-                      href={slide.primaryLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center rounded-full bg-sun px-6 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-bold uppercase tracking-wider text-navy transition-all duration-200 hover:bg-[#efb02a] hover:scale-105 active:scale-95 shadow-lg shadow-sun/30"
-                    >
-                      {slide.primaryText}
-                    </a>
-                    <Link
-                      href={slide.secondaryLink}
-                      className="inline-flex items-center justify-center rounded-full border-2 border-white/70 bg-black/25 backdrop-blur-md px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white transition-all duration-200 hover:bg-white/20 hover:border-white hover:scale-105 active:scale-95 shadow-md"
-                    >
-                      {slide.secondaryText}
-                    </Link>
+                    {/* Action Buttons - Clean compact sizing on mobile */}
+                    <div className="mt-3 sm:mt-4 md:mt-6 flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4">
+                      <a
+                        href={slide.primaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full bg-sun px-4 sm:px-6 md:px-7 py-1.5 sm:py-2.5 md:py-3 text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-navy transition-all duration-200 hover:bg-[#efb02a] hover:scale-105 active:scale-95 shadow-lg shadow-sun/30"
+                      >
+                        {slide.primaryText}
+                      </a>
+                      <Link
+                        href={slide.secondaryLink}
+                        className="inline-flex items-center justify-center rounded-full border-2 border-white/70 bg-black/25 backdrop-blur-md px-3.5 sm:px-5 md:px-6 py-1.5 sm:py-2.5 md:py-3 text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white transition-all duration-200 hover:bg-white/20 hover:border-white hover:scale-105 active:scale-95 shadow-md"
+                      >
+                        {slide.secondaryText}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Prev Navigation Button */}

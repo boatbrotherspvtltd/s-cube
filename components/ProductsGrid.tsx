@@ -77,7 +77,8 @@ export default async function ProductsGrid() {
           subtitle="Explore our comprehensive range of PV modules, inverters, storage batteries, pumps, lighting and BOS."
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Product Cards: Horizontal Snap Carousel on Mobile, Exact 3-Col Grid on Desktop */}
+        <div className="mt-8 sm:mt-12 flex overflow-x-auto snap-x snap-mandatory gap-4 pb-5 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 sm:pt-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {products.map((product) => {
             const Icon = icons[product.icon as keyof typeof icons] ?? Sun;
             const imageSrc = getCategoryProductImage(
@@ -90,7 +91,7 @@ export default async function ProductsGrid() {
               <Link
                 key={product.slug}
                 href={`/products/${product.slug}`}
-                className="group relative flex flex-col overflow-hidden rounded-3xl border border-line/70 bg-white shadow-xs transition-all duration-500 hover:-translate-y-1.5 hover:border-navy/20 hover:shadow-2xl"
+                className="group relative flex flex-col overflow-hidden rounded-3xl border border-line/70 bg-white shadow-xs transition-all duration-500 hover:-translate-y-1.5 hover:border-navy/20 hover:shadow-2xl w-[82vw] max-w-[310px] flex-shrink-0 snap-center sm:w-auto sm:max-w-none sm:flex-shrink"
               >
                 {/* Showcase Image Container */}
                 <div className="relative h-60 w-full overflow-hidden bg-gradient-to-b from-slate-50 via-slate-100/80 to-slate-200/50 flex items-center justify-center p-4">
@@ -166,6 +167,13 @@ export default async function ProductsGrid() {
               </Link>
             );
           })}
+        </div>
+
+        {/* Mobile Swipe Hint (Hidden on Desktop) */}
+        <div className="mt-4 flex items-center justify-center gap-1.5 sm:hidden text-xs text-muted font-medium">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-sun animate-pulse" />
+          <span>Swipe horizontally to view all {products.length} products</span>
+          <ArrowRight className="h-3.5 w-3.5 text-muted" />
         </div>
       </div>
     </section>
