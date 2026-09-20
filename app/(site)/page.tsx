@@ -7,6 +7,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import BrandsStrip from "@/components/BrandsStrip";
 import Warehouse from "@/components/Warehouse";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
 import Capabilities from "@/components/Capabilities";
 import GalleryPreview from "@/components/GalleryPreview";
 import ContactSection from "@/components/ContactSection";
@@ -34,6 +35,7 @@ export default function Home() {
       <BrandsStrip />
       <Warehouse />
       <WhyChooseUs />
+      <Testimonials />
       <Capabilities />
       <GalleryPreview />
       <ContactSection />
