@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     images: ["/images/hero.jpg"],
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "YfZD_jFF4b0oZn-OMGkpy0-FZDCt7oIaTdEPNvcNNqI",
   },
 };
 
