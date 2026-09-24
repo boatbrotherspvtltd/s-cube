@@ -5,8 +5,8 @@ export const company = {
   model: "CNF · Distributor · Dealer",
   city: "Guwahati, Assam",
   region: "Assam & the Northeast",
-  website: "https://www.scubemercantile.in",
-  websiteLabel: "www.scubemercantile.in",
+  website: "https://scubemercantile.in",
+  websiteLabel: "scubemercantile.in",
   email: "Info.scubemercantile@gmail.com",
   // Replace digits only, country code included, no + or spaces. Example: 919876543210
   whatsapp: "91XXXXXXXXXX",
