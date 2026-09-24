@@ -186,7 +186,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-navy select-none max-h-[85vh] md:max-h-[95vh] min-h-[360px] sm:min-h-[440px] md:min-h-[520px]"
+      className="relative w-full overflow-hidden bg-navy select-none min-h-[440px] sm:min-h-[480px] md:min-h-[520px] max-h-[90vh] md:max-h-[95vh]"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -210,7 +210,7 @@ export default function Hero() {
           return (
             <div
               key={slide.uniqueKey}
-              className="relative w-full flex-shrink-0 aspect-[2752/1536] max-h-[85vh] md:max-h-[95vh] min-h-[360px] sm:min-h-[440px] md:min-h-[520px]"
+              className="relative w-full flex-shrink-0 min-h-[440px] sm:min-h-[480px] md:min-h-[520px] md:aspect-[2752/1536] max-h-[90vh] md:max-h-[95vh]"
             >
               {/* Background Image */}
               <Image
@@ -231,7 +231,7 @@ export default function Hero() {
                   {/* Desktop / Tablet horizontal gradient: dark on the right, transparent on the left */}
                   <div className="absolute inset-0 hidden md:block bg-gradient-to-l from-[#071322]/95 via-[#071322]/80 via-45% to-transparent z-10" />
                   {/* Mobile gradient: subtle bottom gradient for text contrast without hiding faces above */}
-                  <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#071322]/95 via-[#071322]/55 via-45% to-transparent z-10" />
+                  <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#071322]/95 via-[#071322]/65 via-50% to-[#071322]/20 z-10" />
                 </>
               ) : (
                 // Standard Left-aligned slides (Heroes 2, 3, 4):
@@ -239,14 +239,14 @@ export default function Hero() {
                   {/* Desktop / Tablet horizontal gradient: dark on left, clear on right */}
                   <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-[#071322]/95 via-[#071322]/80 via-45% to-transparent z-10" />
                   {/* Mobile gradient */}
-                  <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#071322]/95 via-[#071322]/55 via-45% to-transparent z-10" />
+                  <div className="absolute inset-0 md:hidden bg-gradient-to-t from-[#071322]/95 via-[#071322]/65 via-50% to-[#071322]/20 z-10" />
                   <div className="absolute right-0 bottom-0 w-48 sm:w-72 h-20 sm:h-32 bg-gradient-to-tl from-[#071322]/90 via-[#071322]/35 to-transparent z-10 pointer-events-none" />
                 </>
               )}
 
               {/* Slide Text Content */}
               <div className="absolute inset-0 z-10 flex items-center">
-                <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-8 md:py-12 flex">
+                <div className="mx-auto w-full max-w-7xl px-5 sm:px-8 md:px-12 lg:px-16 pt-5 pb-12 sm:py-8 md:py-12 flex">
                   <div
                     className={`w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl text-white ${
                       isRightAligned ? "ml-auto text-left" : "mr-auto text-left"
@@ -255,13 +255,13 @@ export default function Hero() {
                     {/* Top Kicker / Accent Tag */}
                     <div className="flex items-center gap-1.5 sm:gap-2.5 mb-1 sm:mb-2 md:mb-3">
                       <span className="inline-block w-4 sm:w-6 md:w-7 h-[2px] bg-sun" />
-                      <p className="text-[10px] sm:text-xs md:text-sm font-bold tracking-[0.16em] sm:tracking-[0.22em] text-sun uppercase drop-shadow">
+                      <p className="text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.16em] sm:tracking-[0.22em] text-sun uppercase drop-shadow">
                         {slide.kicker}
                       </p>
                     </div>
 
                     {/* Main Headline - Scaled nicely so it does not overwhelm mobile screens */}
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase italic tracking-tight text-white leading-[1.1] sm:leading-[1.05] drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold uppercase italic tracking-tight text-white leading-[1.12] sm:leading-[1.05] drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)]">
                       {slide.title}
                     </h2>
 
@@ -269,28 +269,28 @@ export default function Hero() {
                     <div className="h-[2px] w-20 sm:w-28 md:w-36 lg:w-44 bg-gradient-to-r from-sun via-white/80 to-transparent my-1.5 sm:my-2.5 md:my-3.5 shadow-sm" />
 
                     {/* Subtitle */}
-                    <p className="text-[11px] sm:text-xs md:text-sm lg:text-base font-semibold tracking-wider text-white/95 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] line-clamp-1 sm:line-clamp-none">
+                    <p className="text-xs sm:text-xs md:text-sm lg:text-base font-semibold tracking-wide sm:tracking-wider text-white/95 uppercase drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-snug line-clamp-2 sm:line-clamp-none">
                       {slide.subtitle}
                     </p>
 
-                    {/* Description - Clamped to 2 lines on mobile so image stays visible */}
-                    <p className="mt-1.5 sm:mt-2.5 md:mt-3 text-[11px] sm:text-xs md:text-sm lg:text-base text-white/85 leading-snug sm:leading-relaxed max-w-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] line-clamp-2 sm:line-clamp-none">
+                    {/* Description - Clamped gracefully with breathing room */}
+                    <p className="mt-2 sm:mt-2.5 md:mt-3 text-xs sm:text-sm md:text-base text-white/85 leading-relaxed max-w-lg drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] line-clamp-3 sm:line-clamp-none">
                       {slide.description}
                     </p>
 
-                    {/* Action Buttons - Clean compact sizing on mobile */}
-                    <div className="mt-3 sm:mt-4 md:mt-6 flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4">
+                    {/* Action Buttons - Clean comfortable touch sizing on mobile */}
+                    <div className="mt-3.5 sm:mt-4 md:mt-6 flex flex-wrap items-center gap-2.5 sm:gap-3 md:gap-4">
                       <a
                         href={slide.primaryLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-full bg-sun px-4 sm:px-6 md:px-7 py-1.5 sm:py-2.5 md:py-3 text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-navy transition-all duration-200 hover:bg-[#efb02a] hover:scale-105 active:scale-95 shadow-lg shadow-sun/30"
+                        className="inline-flex items-center justify-center rounded-full bg-sun px-5 sm:px-6 md:px-7 py-2.5 sm:py-2.5 md:py-3 text-xs sm:text-xs md:text-sm font-bold uppercase tracking-wider text-navy transition-all duration-200 hover:bg-[#efb02a] hover:scale-105 active:scale-95 shadow-lg shadow-sun/30"
                       >
                         {slide.primaryText}
                       </a>
                       <Link
                         href={slide.secondaryLink}
-                        className="inline-flex items-center justify-center rounded-full border-2 border-white/70 bg-black/25 backdrop-blur-md px-3.5 sm:px-5 md:px-6 py-1.5 sm:py-2.5 md:py-3 text-[11px] sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white transition-all duration-200 hover:bg-white/20 hover:border-white hover:scale-105 active:scale-95 shadow-md"
+                        className="inline-flex items-center justify-center rounded-full border-2 border-white/70 bg-black/25 backdrop-blur-md px-4 sm:px-5 md:px-6 py-2.5 sm:py-2.5 md:py-3 text-xs sm:text-xs md:text-sm font-semibold uppercase tracking-wider text-white transition-all duration-200 hover:bg-white/20 hover:border-white hover:scale-105 active:scale-95 shadow-md"
                       >
                         {slide.secondaryText}
                       </Link>
@@ -303,7 +303,7 @@ export default function Hero() {
         })}
       </div>
 
-      {/* Prev Navigation Button */}
+      {/* Prev Navigation Button (hidden on mobile, shown sm: and up) */}
       <button
         type="button"
         onClick={(e) => {
@@ -311,12 +311,12 @@ export default function Hero() {
           prevSlide();
         }}
         aria-label="Previous slide"
-        className="group absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 z-20 flex h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/80 text-navy shadow-lg backdrop-blur-md transition-all duration-200 hover:bg-white hover:scale-110 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sun opacity-85 hover:opacity-100"
+        className="group absolute left-3 sm:left-6 md:left-8 top-1/2 -translate-y-1/2 z-20 hidden sm:flex h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/80 text-navy shadow-lg backdrop-blur-md transition-all duration-200 hover:bg-white hover:scale-110 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sun opacity-85 hover:opacity-100"
       >
         <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:-translate-x-0.5" />
       </button>
 
-      {/* Next Navigation Button */}
+      {/* Next Navigation Button (hidden on mobile, shown sm: and up) */}
       <button
         type="button"
         onClick={(e) => {
@@ -324,7 +324,7 @@ export default function Hero() {
           nextSlide();
         }}
         aria-label="Next slide"
-        className="group absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-20 flex h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/80 text-navy shadow-lg backdrop-blur-md transition-all duration-200 hover:bg-white hover:scale-110 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sun opacity-85 hover:opacity-100"
+        className="group absolute right-3 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-20 hidden sm:flex h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-full bg-white/80 text-navy shadow-lg backdrop-blur-md transition-all duration-200 hover:bg-white hover:scale-110 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-sun opacity-85 hover:opacity-100"
       >
         <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-0.5" />
       </button>
