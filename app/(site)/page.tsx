@@ -17,9 +17,13 @@ import { defaultDescription, pageMeta } from "@/lib/seo";
 export const revalidate = 3600;
 
 export const metadata = {
-  ...pageMeta("Solar Distribution, Guwahati", defaultDescription, "/"),
+  ...pageMeta(
+    "Solar in Guwahati, Assam | Solar Panels, Inverters & Dealer",
+    "Authorised distributor of Adani Solar, Waaree, Luminous, Microtek and Tata Power Solar in Guwahati, Assam. Complete rooftop solar, inverters, batteries, pumps and wholesale supply across Northeast India.",
+    "/",
+  ),
   title: {
-    absolute: "S-Cube Mercantile | Solar Distribution, Guwahati",
+    absolute: "S-Cube Mercantile | Solar in Guwahati, Assam | Panels, Inverters & Dealer",
   },
 };
 

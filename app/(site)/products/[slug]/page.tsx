@@ -20,9 +20,18 @@ export async function generateMetadata({
   const data = await getCmsProduct(slug);
   if (!data) return { title: "Product" };
   const image = data.images[0]?.src || "/images/hero.jpg";
+
+  const partnersText =
+    data.product.partners && data.product.partners.length > 0
+      ? ` (${data.product.partners.join(", ")})`
+      : "";
+
+  const seoTitle = `${data.product.name} in Guwahati, Assam${partnersText}`;
+  const seoDescription = `Authorised distributor and dealer of ${data.product.name} in Guwahati, Assam${partnersText}. Genuine warranty, wholesale rates, and fast Northeast supply by S-Cube Mercantile.`;
+
   return pageMeta(
-    data.product.name,
-    data.product.desc,
+    seoTitle,
+    seoDescription,
     `/products/${data.product.slug}`,
     image,
   );

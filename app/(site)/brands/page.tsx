@@ -10,8 +10,8 @@ import { ArrowUpRight } from "lucide-react";
 export const revalidate = 3600;
 
 export const metadata: Metadata = pageMeta(
-  "Authorised Brands",
-  "Authorised solar brands distributed by S-Cube Mercantile: Adani Solar, Waaree Energies, Luminous, Microtek and Tata Power Solar.",
+  "Authorised Solar Distributor Guwahati (Adani, Waaree, Luminous, Microtek)",
+  "Official distributor and dealer for Adani Solar, Waaree Energies, Luminous, Microtek, and Tata Power Solar in Guwahati, Assam and the entire Northeast region.",
   "/brands",
 );
 

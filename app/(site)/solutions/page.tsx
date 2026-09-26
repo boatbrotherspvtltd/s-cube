@@ -4,8 +4,8 @@ import PageHero from "@/components/PageHero";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta(
-  "Solutions",
-  "Solar solutions for rooftop, agriculture, community water and lighting, and utility-scale supply across Assam and the Northeast.",
+  "Solar Solutions in Guwahati Assam: Rooftop, Agriculture & Commercial",
+  "Engineered solar solutions in Guwahati & Northeast: Rooftop solar systems, solar water pumps for agriculture, community lighting, and commercial installations.",
   "/solutions",
 );
 

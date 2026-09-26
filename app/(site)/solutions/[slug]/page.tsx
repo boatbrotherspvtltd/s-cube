@@ -17,9 +17,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const solution = solutions.find((item) => item.slug === slug);
   if (!solution) return { title: "Solution" };
+
+  const partnersText =
+    solution.partners && solution.partners.length > 0
+      ? ` (${solution.partners.join(", ")})`
+      : "";
+  const seoTitle = `${solution.name} Solar Systems in Guwahati, Assam${partnersText}`;
+  const seoDescription = `${solution.desc} Authorised supply and engineering support across Guwahati, Assam and Northeast India by S-Cube Mercantile${partnersText}.`;
+
   return pageMeta(
-    solution.name,
-    solution.desc,
+    seoTitle,
+    seoDescription,
     `/solutions/${solution.slug}`,
   );
 }

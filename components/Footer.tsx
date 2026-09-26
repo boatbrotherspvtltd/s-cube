@@ -75,8 +75,40 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Regional Solar Network & SEO Keywords Strip */}
+      <div className="border-t border-white/10 bg-black/20 py-8 text-xs text-white/60">
+        <div className="mx-auto max-w-6xl px-4 md:px-6">
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 text-xs leading-relaxed">
+            <div>
+              <p className="font-semibold text-white/90 uppercase tracking-wider mb-2">
+                Guwahati & Regional Reach
+              </p>
+              <p className="text-white/65">
+                Headquartered at Khanpara, Guwahati, supplying genuine solar panels, inverters, and equipment across Kamrup, Assam, Meghalaya, Arunachal Pradesh, Nagaland, and all 7 Northeast states.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-white/90 uppercase tracking-wider mb-2">
+                Authorised Brand Portfolio
+              </p>
+              <p className="text-white/65">
+                Direct distribution and dealer channels for Adani Solar PV Modules, Waaree Energies, Luminous Solar Inverters & Batteries, Microtek Inverters, and Tata Power Solar Water Pumps.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-white/90 uppercase tracking-wider mb-2">
+                Solar Solutions & Schemes
+              </p>
+              <p className="text-white/65">
+                Residential rooftop solar, commercial & industrial solar installations, PM Surya Ghar Muft Bijli Yojana support, solar agricultural water pumps, and BOS accessories.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/45">
-        © {new Date().getFullYear()} {company.name}. All rights reserved.
+        © {new Date().getFullYear()} {company.name}. All rights reserved. · Guwahati, Assam
       </div>
     </footer>
   );

@@ -4,8 +4,8 @@ import PageHero from "@/components/PageHero";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta(
-  "Products",
-  "Solar PV modules, inverters, batteries, water pumps, lighting and BOS from authorised brands including Adani Solar, Waaree, Luminous, Microtek and Tata Power Solar.",
+  "Solar Products & Equipment in Guwahati, Assam",
+  "Authorised solar distributor in Guwahati: Tier-1 solar panels, inverters, batteries, pumps and BOS from Adani Solar, Waaree, Luminous, Microtek and Tata Power Solar across Assam & Northeast India.",
   "/products",
 );
 
